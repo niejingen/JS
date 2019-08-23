@@ -1,0 +1,13 @@
+
+switch case语法:
+
+switch (条件) {
+    case 0:
+        day = "星期天";
+        break;
+    case 1:
+        day = "星期一";
+         break;
+    case 6:
+        day = "星期六";
+} 
