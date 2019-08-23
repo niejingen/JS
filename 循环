@@ -1,5 +1,5 @@
 
-switch case语法:
+(1) switch case语法:
 
 switch (条件) {
     case 0:
@@ -11,3 +11,5 @@ switch (条件) {
     case 6:
         day = "星期六";
 } 
+注意多个case，除最后一个case都需要加上break;
+不然会导致后面的case中代码一直会执行
