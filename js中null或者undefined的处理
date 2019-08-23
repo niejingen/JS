@@ -1,0 +1,1 @@
+js对于null或者undefined对象处理时，可以使用typeof(js对象)=='undefined'进行处理
