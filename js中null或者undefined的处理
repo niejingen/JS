@@ -1,1 +1,3 @@
+使用对象之前一定需要判断undefined或者null
+
 js对于null或者undefined对象处理时，可以使用typeof(js对象)=='undefined'进行处理
