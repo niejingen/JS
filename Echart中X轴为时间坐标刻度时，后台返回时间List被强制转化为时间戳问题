@@ -1,0 +1,26 @@
+if(recordlist!=null&&recordlist.size()>0) {
+                for (Record record : recordlist) {
+                    //根据频次决定使用年月还是执行时间
+                    if(frequency!=null&&frequency.equals("每小时")) {                        
+                        list.add(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(record.get("execute_time")));
+                    }else {
+                        list.add(record.get("key_yearmonth"));
+                    }
+                                        
+                }
+            }
+            
+因execute_time在数据库中为timestamp格式
+
+record.get("execute_time")此时为timestamp，直接返回给前台使用会强制转化为时间戳样式
+
+xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: xdata
+                        }
+                    ],
+                    
+直接在后台强制转化
+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(record.get("execute_time"))
