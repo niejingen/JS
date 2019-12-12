@@ -1,0 +1,86 @@
+chart.setOption(
+                {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                                     
+                    
+                    dataZoom: [
+                        {
+                            show: true,
+                            realtime: true,
+                            start: 65,
+                            end: 85
+                        },
+                        {
+                            type: 'inside',
+                            realtime: true,
+                            start: 65,
+                            end: 85
+                        }
+                    ],
+                    
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: xdata
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            axisLabel: {
+                                formatter: '{value}'
+                            }
+
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '指标值',
+                            type: viewtype,
+                            stack: '指标值',
+                            data: zbvalue
+                                              
+                        },
+                        {
+                            name: '预警值',
+                            type: 'line',
+                            stack: '预警值',
+                            data: yjvalue
+                                              
+                        }
+                    ]
+                                       
+                })
+                
+                
+在setOption的时候加上dataZoom 
+
+dataZoom: [
+{
+show: true,
+realtime: true,
+start: 65,
+end: 85
+},
+{
+type: 'inside',
+realtime: true,
+start: 65,
+end: 85
+}
+],
